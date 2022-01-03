@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b761b80d2804f8789eeb0a136818ad7, type: 3}
+  m_Name: Sprint
+  m_EditorClassIdentifier: 
+  cardArt: {fileID: 21300000, guid: d0c539fc145a6e94ab186a3f4178619c, type: 3}
+  cardName: Sprint
+  cardEffectText: <b>Free</b>\nDraw 1 card
+  cardBoostValue: 2
+  attackType: 3
+  origin: 2
+  cardCost: 0
+  range: 0
+  aoeRange: 0
+  beforeMainEffect: 
+  boostEffect: []
+  onKillEffect: 
+  afterMainEffect: Draw 1 Cards;
+  defaultImage: {fileID: 21300000, guid: d0c539fc145a6e94ab186a3f4178619c, type: 3}
+  moveValue: 0

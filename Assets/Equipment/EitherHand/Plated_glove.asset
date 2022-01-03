@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81c855cef10255f439112f9916f061fe, type: 3}
+  m_Name: Plated_glove
+  m_EditorClassIdentifier: 
+  eSprite: {fileID: -6279683937131729180, guid: 1c2880acb15801d46a4a3431467bac21, type: 3}
+  eName: Chain glove
+  eText: 
+  eRarity: 1
+  eSlot: 9
+  eArmor: 1
+  eDamage: 0
+  eMove: 0
+  eHealth: 0
+  startCardDraw: 0
+  specialEffects: []
+  eWeaponComboTag: 1
+  eCards:
+  - {fileID: 11400000, guid: aae1faa91b8d7004a89cfcbf6b0fbf8d, type: 2}
+  - {fileID: 11400000, guid: aae1faa91b8d7004a89cfcbf6b0fbf8d, type: 2}
+  - {fileID: 11400000, guid: aae1faa91b8d7004a89cfcbf6b0fbf8d, type: 2}
+  - {fileID: 11400000, guid: aae1faa91b8d7004a89cfcbf6b0fbf8d, type: 2}

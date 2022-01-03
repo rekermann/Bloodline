@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81c855cef10255f439112f9916f061fe, type: 3}
+  m_Name: Boots
+  m_EditorClassIdentifier: 
+  eSprite: {fileID: 21300000, guid: ae66d337d9450b644b50c3474bb43889, type: 3}
+  eName: Boots
+  eText: Trusty boots
+  eRarity: 0
+  eSlot: 3
+  eArmor: 0
+  eDamage: 0
+  eMove: 1
+  eHealth: 0
+  startCardDraw: 0
+  specialEffects: []
+  eWeaponComboTag: 0
+  eCards:
+  - {fileID: 11400000, guid: fb3324f39a6715747ac70504e6680982, type: 2}
+  - {fileID: 11400000, guid: fb3324f39a6715747ac70504e6680982, type: 2}
+  - {fileID: 11400000, guid: fb3324f39a6715747ac70504e6680982, type: 2}
+  - {fileID: 11400000, guid: fb3324f39a6715747ac70504e6680982, type: 2}

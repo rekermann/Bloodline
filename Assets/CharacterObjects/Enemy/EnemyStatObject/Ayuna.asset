@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81b689e9f7b433c4ba62cc8007598e49, type: 3}
+  m_Name: Ayuna
+  m_EditorClassIdentifier: 
+  enemyName: Ayuna
+  baseMoveValue: 3
+  baseRange: 1
+  health: 55
+  characterSprite: {fileID: 21300000, guid: 016fc1aa4129fc44790f4df541e7c584, type: 3}
+  enemyAiCards:
+  - {fileID: 11400000, guid: 7dd5a92a936e7b64aa36a986443a6a8b, type: 2}
