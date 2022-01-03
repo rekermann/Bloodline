@@ -15,12 +15,14 @@ MonoBehaviour:
   eSprite: {fileID: 21300000, guid: b05941fce06008f44bd32915df519557, type: 3}
   eName: Berserk Sword
   eText: 
-  eRarity: 0
-  eSlot: 0
+  eRarity: 4
+  eSlot: 8
   eArmor: -1
   eDamage: 2
   eMove: 0
   eHealth: 0
+  startCardDraw: 0
+  drawPerTurn: 0
   specialEffects: []
   eWeaponComboTag: 0
   eCards:

@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardArt: {fileID: 21300000, guid: 4d4596de5499877468f08d3940ee537b, type: 3}
   cardName: Power Up
-  cardEffectText: 
+  cardEffectText: <b>Free</b>\nGain 4 boost
   cardBoostValue: 4
   attackType: 3
-  origin: 0
+  origin: 2
   cardCost: 0
   range: 0
   aoeRange: 0
   beforeMainEffect: 
   boostEffect: []
   onKillEffect: 
-  afterMainEffect: 
+  afterMainEffect: Gain 4 boost;
   defaultImage: {fileID: 21300000, guid: 33a38e0c9c6cc674ebd263cda4fba62b, type: 3}
-  damage: 0
+  damage: -1

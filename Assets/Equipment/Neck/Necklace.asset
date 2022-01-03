@@ -22,8 +22,7 @@ MonoBehaviour:
   eMove: 0
   eHealth: 0
   startCardDraw: 0
+  drawPerTurn: 1
   specialEffects: []
   eWeaponComboTag: 0
-  eCards:
-  - {fileID: 11400000, guid: 82afc073e2f5e7149acdf7e675845f9b, type: 2}
-  - {fileID: 11400000, guid: 82afc073e2f5e7149acdf7e675845f9b, type: 2}
+  eCards: []

@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
      private int _maxActionPoints;
      private int boostPoolMax = 0;
      private int startHandAmount = 0;
+     private int drawPerTurn = 0;
+     private bool fastTurn = true;
      [NonSerialized] public int boostPool;
      
 
@@ -59,12 +61,13 @@ public class PlayerController : MonoBehaviour
           startHandAmount = playerStats.startHandAmount;
           
           playerEquipment.SetEquipment(GameManager.Instance.playerSaveObject.GetEquipment());
-          playerEquipment.GetStats(out var eArmor, out var eDamage, out var eHealth, out var eMoveValue, out var eStartCards);
+          playerEquipment.GetStats(out var eArmor, out var eDamage, out var eHealth, out var eMoveValue, out var eStartCards, out var eDrawPerTurn);
           playerDefense += eArmor;
           playerDamage += eDamage;
           playerHealth += eHealth;
           playerMoveValue += eMoveValue;
           startHandAmount += eStartCards;
+          drawPerTurn += eDrawPerTurn;
           
           _maxActionPoints = actionPoints;
           _maxHealth = playerHealth;
@@ -72,6 +75,7 @@ public class PlayerController : MonoBehaviour
      
      public void StartOfTurn()
      {
+          DrawCard(drawPerTurn);
           playerArmor /= 2;
           boostPool = 0;
           CombatManager.Instance.SetBoostPoolUi(boostPool);
@@ -86,6 +90,14 @@ public class PlayerController : MonoBehaviour
           if (actionPoints < cost) return false;
           return Pathfinding.CheckEnemiesInRange(range, playerMovementController.tileStandingOn);
           
+     }
+     
+     public bool CanPlayCard(int cost)
+     {
+          if (!UiManager.Instance.CheckIfCanTakeAction()){ return false;}
+          if (actionPoints < cost) return false;
+          return true;
+
      }
 
      private void DrawCard()
@@ -167,14 +179,28 @@ public class PlayerController : MonoBehaviour
 
           CombatManager.Instance.PlayerActionUi.LoseAction(cost);
           actionPoints -= cost;
-          if (actionPoints <= 0) OnPlayerDone();
+          if (actionPoints <= 0)
+          {
+               if (fastTurn)
+               {
+                    if(!hand.CheckIfCanPlayCard()) OnPlayerDone();
+               }
+                    
+          }
      }
      
      public void UseActionPoint()
      {
           playerMovementController.OnMove -= UseActionPoint;
           CombatManager.Instance.PlayerActionUi.LoseAction(1);
-          if (--actionPoints <= 0) OnPlayerDone();
+          if (--actionPoints <= 0)
+          {
+               if (fastTurn)
+               {
+                    if(!hand.CheckIfCanPlayCard()) OnPlayerDone();
+               }
+                    
+          }
      }
 
      public void Attacked(int damage)
@@ -235,5 +261,11 @@ public class PlayerController : MonoBehaviour
           }
 
           return 0;
+     }
+
+     public int CheckDamageAfterArmor(int amount)
+     {
+          if (playerArmor > amount) return 0;
+          return Math.Abs(playerArmor - amount);
      }
 }

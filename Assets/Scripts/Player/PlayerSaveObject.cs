@@ -15,6 +15,7 @@ namespace Player
         public int actionPoints;
         public int boostPoolMax;
         public int startHandAmount;
+        public int drawPerTurn;
         
         public EquipmentData playerHeadSlot;
         public EquipmentData playerChestSlot;
@@ -25,7 +26,9 @@ namespace Player
         public EquipmentData playerOffHandSlot;
         public EquipmentData playerPocketSlot;
         public EquipmentData playerFeetSlot;
-        
+
+        public List<EquipmentData> backpackItemList = new List<EquipmentData>();
+
         /*
         public PlayerSaveObject(int playerHealth, int playerDamage, int playerDefense, int playerArmor,
             int playerMoveValue, int actionPoints, int boostPoolMax, int startHandAmount, List<EquipmentData> equipmentList)
@@ -64,13 +67,18 @@ namespace Player
             if(playerFeetSlot != null)
                 returnList.Add(playerFeetSlot);
 
+            foreach (var backpackItem in backpackItemList)
+            {
+                if(backpackItem != null) returnList.Add(backpackItem);
+            }
+
             return returnList;
         }
 
         public PlayerStatsObject GetPlayerStats()
         {
             return new PlayerStatsObject(playerHealth, playerDamage, playerDefense, playerArmor, playerMoveValue,
-                actionPoints, boostPoolMax, startHandAmount);
+                actionPoints, boostPoolMax, startHandAmount, drawPerTurn);
         }
     }
 
@@ -84,9 +92,10 @@ namespace Player
         public int actionPoints;
         public int boostPoolMax;
         public int startHandAmount;
+        public int drawPerTurn;
         
         public PlayerStatsObject(int playerHealth, int playerDamage,int playerDefense,int playerArmor,
-            int playerMoveValue,int actionPoints,int boostPoolMax,int startHandAmount)
+            int playerMoveValue,int actionPoints,int boostPoolMax,int startHandAmount, int drawPerTurn)
         {
             
             this.playerHealth = playerHealth;
@@ -97,6 +106,7 @@ namespace Player
             this.actionPoints = actionPoints;
             this.boostPoolMax = boostPoolMax;
             this.startHandAmount = startHandAmount;
+            this.drawPerTurn = drawPerTurn;
         }
     }
 }

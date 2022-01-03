@@ -22,7 +22,8 @@ namespace Equipment
             MainHand,
             TwoHand,
             EitherHand,
-            Neck
+            Neck,
+            Backpack
         }
 
         public enum EquipmentRarity
@@ -65,6 +66,7 @@ namespace Equipment
         public int eMove;
         public int eHealth;
         public int startCardDraw;
+        public int drawPerTurn;
 
         public List<string> specialEffects;
         public WeaponComboTag eWeaponComboTag;
@@ -125,6 +127,12 @@ namespace Equipment
             {
                 builder.Append("Start Cards: " + startCardDraw.ToString("+0;-#")).AppendLine();
             }
+            if (drawPerTurn != 0)
+            {
+                builder.Append("Draw per turn: " + drawPerTurn.ToString("+0;-#")).AppendLine();
+            }
+            
+            
             builder.Append("</color>");
             if (eCards.Count > 0)
             {
@@ -139,7 +147,7 @@ namespace Equipment
                     }
                     else if(prevCard != null)
                     {
-                        builder.Append(count.ToString("+0;-#") + " " + prevCard.cardName);
+                        builder.Append(count.ToString("+0;-#") + " " + prevCard.cardName).AppendLine();
                         count = 1;
                     }
 

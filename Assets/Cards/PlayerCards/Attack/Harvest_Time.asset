@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardArt: {fileID: 21300000, guid: 6800e24db5cb6d041821516d6e611e70, type: 3}
   cardName: Harvesting
-  cardEffectText: 'On Kill: Gain 1 Souls'
+  cardEffectText: 'On Kill: Gain 10 Health'
   cardBoostValue: 4
   attackType: 0
   origin: 0

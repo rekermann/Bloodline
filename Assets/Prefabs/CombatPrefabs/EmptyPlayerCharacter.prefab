@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 5207544987158716770, guid: 6d3f488761801ee4c9af40554cbf9e8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.72, y: 1.36}
@@ -116,15 +116,6 @@ MonoBehaviour:
   playerCards: {fileID: -6435413411206248973}
   playerEquipment: {fileID: 4275598024100131845}
   hand: {fileID: -7681073280883156137}
-  playerHealth: 0
-  playerDamage: 0
-  playerDefense: 0
-  playerArmor: 0
-  playerMoveValue: 0
-  actionPoints: 0
-  boostPoolMax: 0
-  startHandAmount: 0
-  boostPool: 0
 --- !u!114 &-6435413411206248973
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -19,7 +19,8 @@ namespace CardMetaData
             Versatile,
             Tactic,
             Agility,
-            Resource
+            Resource,
+            Trigger
         }
 
         public CardData(Sprite cardArt, String cardName, CardType cardType, String cardEffectText, int cardBoostValue, int cardCombatValue = -1)

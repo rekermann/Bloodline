@@ -21,6 +21,8 @@ MonoBehaviour:
   eDamage: 0
   eMove: 0
   eHealth: 0
+  startCardDraw: 0
+  drawPerTurn: 0
   specialEffects: []
   eWeaponComboTag: 1
   eCards:

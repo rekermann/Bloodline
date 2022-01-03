@@ -10,7 +10,7 @@ public class CombatManager : MonoBehaviour
 {
     public PlayerActionUi PlayerActionUi;
     public PlayerHealthUI PlayerHealthUI;
-    public HealthbarUi playerHealthBar;
+    public HealthBarUi playerHealthBar;
     public BlockUi BlockUi;
     public TextMeshProUGUI boostPoolUi;
     public TextMeshProUGUI armorUi;

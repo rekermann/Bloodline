@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Tiles;
+using UnityEngine;
 
 namespace EnemyAi
 {
@@ -15,11 +16,13 @@ namespace EnemyAi
 
             if(returnTiles.Count > moveValue)
                 return  returnTiles[moveValue - 1];
-
-            if (returnTiles.Count == moveValue) return returnTiles[returnTiles.Count - 2];
+            
+            
             if (returnTiles.Count == 1) return tileStandingOn;
-        
-            return returnTiles[returnTiles.Count-1];
+            if (returnTiles.Count == moveValue) return returnTiles[returnTiles.Count - moveValue];
+            
+            //FIX
+            return returnTiles[returnTiles.Count-2];
 
         }
 

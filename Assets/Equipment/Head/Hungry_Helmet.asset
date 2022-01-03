@@ -15,12 +15,14 @@ MonoBehaviour:
   eSprite: {fileID: 21300000, guid: 2ef2bd27c6777864a9bc0953111ffd83, type: 3}
   eName: Hungry Helmet
   eText: 
-  eRarity: 0
+  eRarity: 5
   eSlot: 0
   eArmor: -1
   eDamage: 1
   eMove: 0
   eHealth: 0
+  startCardDraw: 0
+  drawPerTurn: 0
   specialEffects: []
   eWeaponComboTag: 0
   eCards:

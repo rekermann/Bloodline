@@ -1,5 +1,7 @@
+using System;
 using CardMetaData;
 using Tiles;
+using UiUtilities;
 using UnityEngine;
 
 namespace EnemyAi
@@ -8,10 +10,19 @@ namespace EnemyAi
     {
         private string enemyName;
         private int baseMoveValue;
+
+        public int BaseMoveValue => baseMoveValue;
+
         private int baseRange;
         private int health;
         private int _maxHealth;
-        
+        public int tmpDamage;
+        public int tmpMoveValue;
+        private ISpecialEnemyLogic specialRules;
+        [NonSerialized] public int damagedDealtThisTurn;
+        [NonSerialized] public int damagedTakenThisTurn;
+        public BarUiScaler healthBarUi;
+
         public MapTile tileStandingOn;
 
         [SerializeField] private SpriteRenderer spriteRenderer;
@@ -19,12 +30,14 @@ namespace EnemyAi
         public EnemyStatsObject enemyStatsObject;
 
         private BaseCardObject _activeCard;
+        
+        
 
         public void Start()
         {
             SetupEnemy();
-            
             SetActiveCard();
+            specialRules?.SpecialRules();
         }
 
         public void SetupEnemy()
@@ -38,24 +51,36 @@ namespace EnemyAi
             GetComponent<EnemyDeck>().SetEnemyCards(stats.enemyAiCards);
             _maxHealth = health;
             CombatManager.Instance.AddEnemy(this);
+            specialRules = GetComponent<ISpecialEnemyLogic>();
+            
         }
         
         public void TakeTurn()
         {
+            specialRules?.StartOfTurn();
             EnemyMovement();
             PlayerController player = EnemyMovementController.CheckIfPlayerIsInRange(tileStandingOn, baseRange);
             if (player != null)
+            {
+                specialRules?.BeforeDamage();
                 EnemyAttack(player);
+                specialRules?.AfterDamage();
+            }
             else
             {
                 CombatManager.Instance.ContinueTurn();
             }
+            tmpDamage = 0;
+            tmpMoveValue = 0;
+            specialRules?.EndOfTurn();
+            damagedTakenThisTurn = 0;
+            damagedDealtThisTurn = 0;
         }
 
 
         private void EnemyMovement()
         {
-            MapTile destinationTile = EnemyMovementController.MoveTowardsPlayer(tileStandingOn, baseMoveValue);
+            MapTile destinationTile = EnemyMovementController.MoveTowardsPlayer(tileStandingOn, baseMoveValue + tmpMoveValue);
             if (destinationTile != tileStandingOn) tileStandingOn.unitOnTile = null;
             if (destinationTile != null)
             {
@@ -65,11 +90,15 @@ namespace EnemyAi
                 destinationTile.unitOnTile = obj;
             
             }
+
         }
 
         private void EnemyAttack(PlayerController player)
         {
-            player.Attacked(_activeCard.GetCardData().cardCombatValue);
+            //puke
+            damagedDealtThisTurn = player.CheckDamageAfterArmor(_activeCard.GetCardData().cardCombatValue + tmpDamage);
+            player.Attacked(_activeCard.GetCardData().cardCombatValue + tmpDamage);
+            
 
         }
 
@@ -83,26 +112,16 @@ namespace EnemyAi
             _activeCard = GetComponent<EnemyDeck>().GetRandomCard();
             GetComponent<InfoWindow>().SetInfoWindowData(enemyName, health, _maxHealth, _activeCard);
         }
-
-        public bool TakeDamage(BaseCardObject baseCardObject)
-        {
-            health -= baseCardObject.GetCardData().cardCombatValue;
-            if (health < 0) health = 0;
-            GetComponent<InfoWindow>().SetInfoWindowData(enemyName, health, _maxHealth, _activeCard);
-            if (health <= 0)
-            {
-                Die();
-                return true;
-            }
-
-            return false;
-        }
-
+        
         public bool TakeDamage(int dmg)
         {
+            damagedTakenThisTurn = dmg;
             health -= dmg;
+            specialRules?.BeforeDamageTaken();
             if (health < 0) health = 0;
+            if(healthBarUi != null) healthBarUi.UpdateBarXScale(health, _maxHealth);
             GetComponent<InfoWindow>().SetInfoWindowData(enemyName, health, _maxHealth, _activeCard);
+            specialRules?.AfterDamagedTaken();
             if (health <= 0)
             {
                 Die();
@@ -116,5 +135,7 @@ namespace EnemyAi
             CombatManager.Instance.RemoveEnemy(this);
             Destroy(gameObject);
         }
+        
+        
     }
 }

@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthbarUi : MonoBehaviour
+public class HealthBarUi : MonoBehaviour
 {
     public TextMeshProUGUI healthText;
     public Transform healthBar;

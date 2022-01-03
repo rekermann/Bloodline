@@ -15,12 +15,16 @@ MonoBehaviour:
   eSprite: {fileID: 21300000, guid: 7aaad977f55b69d4a81c0ab1e2a9c612, type: 3}
   eName: Pocket Stones
   eText: 
-  eRarity: 0
+  eRarity: 4
   eSlot: 5
   eArmor: 0
   eDamage: 0
   eMove: 0
+  eHealth: 0
+  startCardDraw: 0
+  drawPerTurn: 0
   specialEffects: []
+  eWeaponComboTag: 0
   eCards:
   - {fileID: 11400000, guid: 975bcdf9c9d189544b153bf7ec20efcc, type: 2}
   - {fileID: 11400000, guid: 975bcdf9c9d189544b153bf7ec20efcc, type: 2}

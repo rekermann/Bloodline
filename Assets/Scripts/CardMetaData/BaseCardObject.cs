@@ -19,7 +19,7 @@ namespace CardMetaData
             FreeTarget,
             Self
         }
-    
+        
         public Sprite cardArt;
         public String cardName;
         public String cardEffectText;

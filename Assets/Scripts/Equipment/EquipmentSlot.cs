@@ -37,5 +37,24 @@ namespace Equipment
         {
             _tooltipPopup.HideInfo();
         }
+
+        public EquipmentData GetEquippedItemData()
+        {
+            return _equipmentData;
+        }
+
+        public void Unequip()
+        {
+            image.sprite = null;
+            image.color = new Color
+            {
+                r = 255,
+                g = 255,
+                b = 255,
+                a = 0,
+            };
+            itemEquipped = false;
+            _equipmentData = null;
+        }
     }
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using CardMetaData;
 using UnityEngine;
 
 namespace Equipment
@@ -7,6 +8,7 @@ namespace Equipment
     {
         public List<EquipmentSlot> equipmentSlots;
         public GameObject backpackUi;
+        
 
         public EquipmentSlot GetEquipmentSlot(EquipmentData.EquipmentSlot eSlot)
         {
@@ -32,9 +34,30 @@ namespace Equipment
             {
                 return true;
             }
+            
+            if (item2 == EquipmentData.EquipmentSlot.TwoHand && item1 == EquipmentData.EquipmentSlot.MainHand)
+                return true;
                
 
             return false;
+        }
+
+        public void RemoveResourceItem(BaseCardObject card)
+        {
+            foreach (var item in equipmentSlots)
+            {
+                if (item.itemSlot == EquipmentData.EquipmentSlot.Backpack) 
+                {
+                    //[0]Bad
+                    if (item.GetEquippedItemData().eCards[0] == card)
+                    {
+                        equipmentSlots.Remove(item);
+                        item.Unequip();
+                        break;
+                    }
+                }
+            }
+            
         }
 
         public void ToggleEquipmentUi()

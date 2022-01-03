@@ -16,27 +16,31 @@ public class GameManager : MonoBehaviour
 
     public void Awake()
     {
-        mainCamera = Camera.main;
+        SceneManager.sceneLoaded += OnSceneLoaded;
         if (Instance != null)
         {
             Destroy(gameObject);
         }
-
+        
         Instance = this;
         DontDestroyOnLoad(gameObject);
         
     }
 
+    private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
+    {
+        mainCamera = Camera.main;
+    }
+
+
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            Debug.Log("asd");
             SceneManager.LoadScene("Ayuna");
         }
         if (Input.GetKeyDown(KeyCode.B))
         {
-            Debug.Log("asd");
             SceneManager.LoadScene("CombatTestScene");
         }
     }

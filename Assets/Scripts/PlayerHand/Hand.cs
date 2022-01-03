@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using CardMetaData;
 using UnityEngine;
@@ -58,6 +59,14 @@ namespace PlayerHand
         }
 
 
+        public bool CheckIfCanPlayCard()
+        {
+            foreach (var card in _cards)
+            {
+                if (card.cardCost == 0) return true;
+            }
 
+            return false;
+        }
     }
 }

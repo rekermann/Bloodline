@@ -70,6 +70,7 @@ namespace PlayerHand
                     ResolveMain();
                     break;
                 case CardPhases.EndEffects:
+                    
                     AfterMainEffects();
                     break;
                 case CardPhases.Done:
@@ -127,6 +128,10 @@ namespace PlayerHand
             {
                 tmpRangeValue += effectValue;
             }
+            if (valueUsedAs.ToLower() == "boost")
+            {
+                _playerController.GainBoost(effectValue);
+            }
         
         }
     
@@ -180,7 +185,7 @@ namespace PlayerHand
     
         private void BeforeMainEffects()
         {
-            CheckForResourceTrigger();
+            CheckForTriggerCard();
             if (_baseCardObject.boostEffect.Length > 0)
             {
                 BoostCard();
@@ -189,11 +194,11 @@ namespace PlayerHand
             ContinuePhase();
         }
 
-        private void CheckForResourceTrigger()
+        private void CheckForTriggerCard()
         {
             foreach(var card in CardManager.Instance.handUi.GetCardsInHand())
             {
-                if (card.GetComponent<CardPopulate>().GetCardData().cardType == CardData.CardType.Resource)
+                if (card.GetComponent<CardPopulate>().GetCardData().cardType == CardData.CardType.Trigger)
                 {
                     if (ResourceTriggerParser(card))
                     {
@@ -318,6 +323,8 @@ namespace PlayerHand
                 ResolveCombat();
                 ContinuePhase();
             }
+            
+            if(_card.cardType == CardData.CardType.Resource) ContinuePhase();
         
         
         
@@ -325,8 +332,11 @@ namespace PlayerHand
 
         public void ResolveCombat()
         {
+            
+           
             if (_baseCardObject.attackType == BaseCardObject.AttackTypeEnum.Aoe)
             {
+                
                 aoeRange += _baseCardObject.aoeRange;
                 List<MapTile> enemiesInRange = Pathfinding.GetEnemiesInRange(aoeRange, target);
                 foreach (var tile in enemiesInRange)
@@ -357,6 +367,7 @@ namespace PlayerHand
                 }
             
             }
+            
         }
 
         private void ResolveTargeting()
@@ -398,6 +409,10 @@ namespace PlayerHand
 
         private void DonePlayCard()
         {
+            if (_card.cardType == CardData.CardType.Resource)
+            {
+                UiManager.Instance.equipmentManager.RemoveResourceItem(_baseCardObject);
+            }
             UiManager.Instance.EnableAction();
             _playerController.UseActionPoint(_baseCardObject.cardCost);
             CardManager.Instance.SendToDiscard(_baseCardObject);
@@ -429,7 +444,8 @@ namespace PlayerHand
             if(locked) return;
             if (CardManager.Instance.inPlayZone)
             {
-                if (UiManager.Instance.CheckIfCanTakeAction() && _card.cardType != CardData.CardType.Resource)
+                if (UiManager.Instance.CheckIfCanTakeAction() && _card.cardType != CardData.CardType.Trigger && 
+                    _playerController.CanPlayCard(_baseCardObject.cardCost))
                 {
                     if (_playerController.CanPlayCard(CheckRange(), _baseCardObject.cardCost))
                     {
