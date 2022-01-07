@@ -116,6 +116,7 @@ MonoBehaviour:
   playerCards: {fileID: -6435413411206248973}
   playerEquipment: {fileID: 4275598024100131845}
   hand: {fileID: -7681073280883156137}
+  struggle: {fileID: 11400000, guid: 474e2e4591b2dc440ae991a800dff3ed, type: 2}
 --- !u!114 &-6435413411206248973
 MonoBehaviour:
   m_ObjectHideFlags: 0

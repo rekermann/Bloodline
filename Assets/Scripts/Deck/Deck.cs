@@ -12,6 +12,7 @@ namespace Deck
         private static Random rng = new Random();
         public delegate void DeckChange();
         public event DeckChange OnDeckClicked = () => {};
+        public BaseCardObject struggle;
 
 
         public void Clicked()
@@ -21,9 +22,13 @@ namespace Deck
     
         public BaseCardObject DrawCard()
         {
-            if(_cards.Count == 0)  return null;
-            BaseCardObject returnCard = _cards[0];
-            _cards.RemoveAt(0);
+            BaseCardObject returnCard = null;
+            if(_cards.Count == 0)  { returnCard =  struggle;}
+            else
+            {
+                returnCard = _cards[0];
+                _cards.RemoveAt(0);
+            }
             CardManager.Instance.AddCardToUi(returnCard);
             return returnCard;
         
@@ -37,7 +42,7 @@ namespace Deck
                 int k = rng.Next(n + 1);  
                 (list[k], list[n]) = (list[n], list[k]);
             }
-
+            
             return list;
         }
 

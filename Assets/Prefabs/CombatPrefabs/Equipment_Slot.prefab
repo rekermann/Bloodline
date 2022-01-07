@@ -118,4 +118,5 @@ MonoBehaviour:
   _tooltipPopup: {fileID: 1014577341962034509, guid: 9c73989681a506a4f874d1cd98f29c98, type: 3}
   image: {fileID: 567901166154959187}
   itemSlot: 0
+  _equipmentData: {fileID: 0}
   itemEquipped: 0

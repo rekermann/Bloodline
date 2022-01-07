@@ -29,22 +29,9 @@ namespace Player
 
         public List<EquipmentData> backpackItemList = new List<EquipmentData>();
 
-        /*
-        public PlayerSaveObject(int playerHealth, int playerDamage, int playerDefense, int playerArmor,
-            int playerMoveValue, int actionPoints, int boostPoolMax, int startHandAmount, List<EquipmentData> equipmentList)
-        {
-            this.playerHealth = playerHealth;
-            this.playerDamage = playerDamage;
-            this.playerDefense = playerDefense;
-            this.playerArmor = playerArmor;
-            this.playerMoveValue = playerMoveValue;
-            this.actionPoints = actionPoints;
-            this.boostPoolMax = boostPoolMax;
-            this.startHandAmount = startHandAmount;
-            this.equipmentList = equipmentList;
-        }
-        */
-
+        
+        
+        
         public List<EquipmentData> GetEquipment()
         {
             List<EquipmentData> returnList = new List<EquipmentData>();
@@ -75,14 +62,68 @@ namespace Player
             return returnList;
         }
 
-        public PlayerStatsObject GetPlayerStats()
+        public PlayerSaveObj GetPlayerStats()
         {
-            return new PlayerStatsObject(playerHealth, playerDamage, playerDefense, playerArmor, playerMoveValue,
-                actionPoints, boostPoolMax, startHandAmount, drawPerTurn);
+            return new PlayerSaveObj(playerHealth, playerDamage, playerDefense, playerArmor, playerMoveValue,
+                actionPoints, boostPoolMax, startHandAmount, drawPerTurn, GetEquipment());
+        }
+
+        public void SavePlayerStats(PlayerSaveObj obj)
+        {
+            playerHealth = obj.playerHealth;
+            playerDamage = obj.playerDamage;
+            playerDefense = obj.playerDefense;
+            playerArmor = obj.playerArmor;
+            playerMoveValue = obj.playerMoveValue;
+            actionPoints = obj.actionPoints;
+            boostPoolMax = obj.boostPoolMax;
+            startHandAmount = obj.startHandAmount;
+            drawPerTurn = obj.drawPerTurn;
+
+            playerHeadSlot = null;
+            playerChestSlot = null;
+            playerLegsSlot = null;
+            playerNeckSlot = null;
+            playerFingerSlot = null;
+            playerMainHandSlot = null;
+            playerOffHandSlot = null;
+            playerPocketSlot = null;
+            playerFeetSlot = null;
+            backpackItemList.Clear();
+            
+            foreach (var equipment in obj.equipmentList)
+            {
+                if (equipment.eSlot == EquipmentData.EquipmentSlot.Head) playerHeadSlot = equipment;
+                if (equipment.eSlot == EquipmentData.EquipmentSlot.Chest) playerChestSlot = equipment;
+                if (equipment.eSlot == EquipmentData.EquipmentSlot.Legs) playerLegsSlot = equipment;
+                if (equipment.eSlot == EquipmentData.EquipmentSlot.Neck) playerNeckSlot = equipment;
+                if (equipment.eSlot == EquipmentData.EquipmentSlot.Finger) playerFingerSlot = equipment;
+                if (equipment.eSlot == EquipmentData.EquipmentSlot.Pocket) playerPocketSlot = equipment;
+                if (equipment.eSlot == EquipmentData.EquipmentSlot.Feet) playerFeetSlot = equipment;
+                if (equipment.eSlot == EquipmentData.EquipmentSlot.Backpack) backpackItemList.Add(equipment);
+                
+                if (equipment.eSlot == EquipmentData.EquipmentSlot.MainHand || 
+                    equipment.eSlot == EquipmentData.EquipmentSlot.EitherHand || 
+                    equipment.eSlot == EquipmentData.EquipmentSlot.TwoHand)
+                {
+                    if(playerMainHandSlot == null)
+                        playerMainHandSlot = equipment;
+                }
+                else if (equipment.eSlot == EquipmentData.EquipmentSlot.MainHand || 
+                    equipment.eSlot == EquipmentData.EquipmentSlot.EitherHand)
+                {
+                    if(playerOffHandSlot == null)
+                        playerOffHandSlot = equipment;
+                }
+            }
+
+            
+            
+            
         }
     }
 
-    public class PlayerStatsObject
+    public class PlayerSaveObj
     {
         public int playerHealth;
         public int playerDamage;
@@ -93,9 +134,10 @@ namespace Player
         public int boostPoolMax;
         public int startHandAmount;
         public int drawPerTurn;
-        
-        public PlayerStatsObject(int playerHealth, int playerDamage,int playerDefense,int playerArmor,
-            int playerMoveValue,int actionPoints,int boostPoolMax,int startHandAmount, int drawPerTurn)
+        public List<EquipmentData> equipmentList;
+
+        public PlayerSaveObj(int playerHealth, int playerDamage,int playerDefense,int playerArmor,
+            int playerMoveValue,int actionPoints,int boostPoolMax,int startHandAmount, int drawPerTurn, List<EquipmentData> equipmentList)
         {
             
             this.playerHealth = playerHealth;
@@ -107,6 +149,12 @@ namespace Player
             this.boostPoolMax = boostPoolMax;
             this.startHandAmount = startHandAmount;
             this.drawPerTurn = drawPerTurn;
+            this.equipmentList = equipmentList;
+        }
+
+        public void SetEquipment(List<EquipmentData> equipmentData)
+        {
+            equipmentList = equipmentData;
         }
     }
 }

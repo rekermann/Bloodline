@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using CardMetaData;
 using UnityEngine;
@@ -8,7 +9,61 @@ namespace Equipment
     {
         public List<EquipmentSlot> equipmentSlots;
         public GameObject backpackUi;
-        
+        public GameObject draggableInventorySlot;
+        public static EquipmentManager instance;
+        public GameObject currentDragItem;
+
+        public void Start()
+        {
+            instance = this;
+            SetEquipment(GameManager.Instance.GetSave().equipmentList);
+        }
+
+        public void Update()
+        {
+            if (currentDragItem != null)
+            {
+                currentDragItem.transform.position = Input.mousePosition;
+            }
+            
+        }
+
+        public void SaveEquipment()
+        {
+            GameManager.Instance.SavePlayerEquipment(GetEquippedItems());
+        }
+
+
+
+        public List<EquipmentData> GetEquippedItems()
+        {
+            List<EquipmentData> list = new List<EquipmentData>();
+            foreach (var slot in equipmentSlots)
+            {
+                if (slot.itemEquipped)
+                {
+                    list.Add(slot._equipmentData);
+                }
+                
+            }
+
+            return list;
+        }
+
+        public void SetEquipment(List<EquipmentData> equipmentList)
+        {
+            foreach (var item in equipmentList)
+            {
+                SetEquipmentUi(item);
+            }
+        }
+
+        public void SetEquipmentUi(EquipmentData item)
+        {
+            EquipmentSlot itemSlot = GetEquipmentSlot(item.eSlot);
+            if(itemSlot != null) itemSlot.SetItem(item);
+        }
+
 
         public EquipmentSlot GetEquipmentSlot(EquipmentData.EquipmentSlot eSlot)
         {
@@ -49,6 +104,7 @@ namespace Equipment
                 if (item.itemSlot == EquipmentData.EquipmentSlot.Backpack) 
                 {
                     //[0]Bad
+                    if(item.GetEquippedItemData() == null) continue;
                     if (item.GetEquippedItemData().eCards[0] == card)
                     {
                         equipmentSlots.Remove(item);
@@ -70,6 +126,16 @@ namespace Equipment
         {
             backpackUi.SetActive(!backpackUi.activeSelf);
         }
+        
+        public void MoveItem(EquipmentSlot slot)
+        {
+            if(currentDragItem != null) return;
+            currentDragItem = Instantiate(draggableInventorySlot, gameObject.transform.parent, true);
+            currentDragItem.transform.position = Input.mousePosition;
+            currentDragItem.GetComponent<DraggableSlot>().SetItem(slot.GetEquippedItemData());
+            slot.Unequip();
+        }
+        
         
     }
 }

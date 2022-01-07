@@ -16,11 +16,13 @@ MonoBehaviour:
   eName: Crit Ring
   eText: 
   eRarity: 0
-  eSlot: 0
+  eSlot: 4
   eArmor: 0
   eDamage: 0
   eMove: 0
   eHealth: 0
+  startCardDraw: 0
+  drawPerTurn: 0
   specialEffects: []
   eWeaponComboTag: 0
   eCards:

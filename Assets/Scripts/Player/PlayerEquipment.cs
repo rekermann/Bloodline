@@ -13,17 +13,9 @@ namespace Player
         public void SetEquipment(List<EquipmentData> equipmentList)
         {
             equipmentDataList = equipmentList;
-            foreach (var item in equipmentDataList)
-            {
-                SetEquipmentUi(item);
-            }
+
         }
 
-        public void SetEquipmentUi(EquipmentData item)
-        {
-            EquipmentSlot itemSlot = UiManager.Instance.equipmentManager.GetEquipmentSlot(item.eSlot);
-            if(itemSlot != null) itemSlot.SetItem(item);
-        }
 
         public List<BaseCardObject> GetEquipmentCards()
         {
@@ -39,11 +31,11 @@ namespace Player
                 }
                 equipmentCards.AddRange(equipment.eCards);
             }
-
-            if (tags.Count > 1)
+            /*            if (tags.Count > 1)
             {
                 equipmentCards.AddRange(UiManager.Instance.equipmentCombos.CheckCardCombos(tags[0], tags[1]));
-            }
+            }*/
+
             
             return equipmentCards;
         }

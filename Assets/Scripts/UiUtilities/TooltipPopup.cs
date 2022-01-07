@@ -21,14 +21,11 @@ namespace UiUtilities
         {
             popupCanvas = popupCanvasObject.GetComponent<Canvas>();
         }
-
-        private void Update()
-        {
-            FollowCursor();
-        }
+        
 
         private void FollowCursor()
         {
+            
             if(!popupCanvasObject.activeSelf) {return;}
 
             Vector3 newPos = Input.mousePosition + offset;
@@ -59,12 +56,14 @@ namespace UiUtilities
 
         public void DisplayInfo(EquipmentData item)
         {
+            
             if (item == null) return;
             StringBuilder builder = new StringBuilder();
             builder.Append(item.GetTooltipInfoText());
             infoText.text = builder.ToString();
             gameObject.SetActive(true);
             LayoutRebuilder.ForceRebuildLayoutImmediate(popupObject);
+            FollowCursor();
         }
 
         public void HideInfo()

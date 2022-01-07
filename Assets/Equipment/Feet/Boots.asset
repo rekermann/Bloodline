@@ -14,14 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eSprite: {fileID: 21300000, guid: ae66d337d9450b644b50c3474bb43889, type: 3}
   eName: Boots
-  eText: Trusty boots
-  eRarity: 0
+  eText: 
+  eRarity: 1
   eSlot: 3
   eArmor: 0
   eDamage: 0
   eMove: 1
   eHealth: 0
   startCardDraw: 0
+  drawPerTurn: 0
   specialEffects: []
   eWeaponComboTag: 0
   eCards:

@@ -1,95 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20ffb4ee-1428-4db9-b07f-40ebacadc215" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/healthpotion.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/healthpotion.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cards/MonsterAiCards/MonsterCardArt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cards/MonsterAiCards/MonsterCardArt/Slash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cards/MonsterAiCards/MonsterCardArt/Slash.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cards/MonsterAiCards/MonsterCardArt/bite.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cards/MonsterAiCards/MonsterCardArt/bite.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cards/MonsterAiCards/MonsterCardArt/block.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cards/MonsterAiCards/MonsterCardArt/block.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cards/MonsterAiCards/MonsterCardArt/hunger.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cards/MonsterAiCards/MonsterCardArt/hunger.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Resource/Small_Health_Potion.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Resource/Small_Health_Potion.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Trigger.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Trigger/Critical_Strike.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Trigger/Critical_Strike.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CharacterObjects/Enemy/EnemySprite/ProfileAyun.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CharacterObjects/Enemy/EnemySprite/ProfileAyun.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/Small_Health_Potion.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/Small_Health_Potion.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/powerpotion.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/powerpotion.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Potions.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Potions/Power Potion.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Potions/Power Potion.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Potions/Small health Potion.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Potions/Small health Potion.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/StartScreen.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/StartScreen.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyAi/Ayuna.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyAi/Ayuna/AyunaAi.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyAi/Ayuna/AyunaAi.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyAi/ISpecialEnemyLogic.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyAi/ISpecialEnemyLogic.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UiUtilities/BarUiScaler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UiUtilities/BarUiScaler.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/actionpointIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/actionpointIcon.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/aryunBg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/aryunBg.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/boostIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/boostIcon.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/eqIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/eqIcon.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/shieldIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/shieldIcon.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/startscreen.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/startscreen.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/swords-emblem.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/swords-emblem.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/walking-boot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/walking-boot.png.meta" afterDir="false" />
+    <list default="true" id="20ffb4ee-1428-4db9-b07f-40ebacadc215" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/129.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/129.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Attack/Struggle.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Attack/Struggle.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/OutsideCombat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/OutsideCombat/OutsideCombatUi.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/OutsideCombat/OutsideCombatUi.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/DraggableSlot.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/DraggableSlot.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Equipment.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Equipment.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Equipment/DraggableSlot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Equipment/DraggableSlot.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bloodline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bloodline/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Attack/Harvest_Time.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Attack/Harvest_Time.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Resource/Critical_Strike.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Resource/Critical_Strike.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Resource/Power_Up.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Resource/Power_Up.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Tactic/Plan_ahead.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Tactic/Plan_ahead.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Tactic/Power_up.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Tactic/Power_up.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CharacterObjects/Enemy/EnemyStatObject/Ayuna.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CharacterObjects/Enemy/EnemyStatObject/Ayuna.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Attack/Throw_stone.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Attack/Throw_stone.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CharacterObjects/Player/PlayerStatObject/CharacterSave.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CharacterObjects/Player/PlayerStatObject/CharacterSave.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Equipment/EitherHand/Gloves.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Equipment/EitherHand/Gloves.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Equipment/Chest/Jacket.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Equipment/Chest/Jacket.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Equipment/EitherHand/Plated_glove.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Equipment/EitherHand/Plated_glove.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Equipment/Feet/Boots.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Equipment/Feet/Boots.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Equipment/Finger/Crit_Ring.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Equipment/Finger/Crit_Ring.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Equipment/Head/Hungry_Helmet.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Equipment/Head/Hungry_Helmet.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Equipment/Head/Thinking_cap.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Equipment/Head/Thinking_cap.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Equipment/Legs/Leather_Pants.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Equipment/Legs/Leather_Pants.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Equipment/Neck/Necklace.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Equipment/Neck/Necklace.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Equipment/Pocket/Pocket_Stones.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Equipment/Pocket/Pocket_Stones.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Equipment/TwoHand/Berserk_Sword.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Equipment/TwoHand/Berserk_Sword.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/CombatPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/CombatPrefab.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/EmptyPlayerCharacter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/EmptyPlayerCharacter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/EnemyPrefabs/Ayuna.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/EnemyPrefabs/Ayuna.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/Tile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/Tile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/Equipment_Slot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/Equipment_Slot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/TooltipCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/TooltipCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/UI_Combat_Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/UI_Combat_Canvas.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ayuna.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ayuna.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/CombatTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CombatTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardMetaData/BaseCardObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardMetaData/BaseCardObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardMetaData/CardData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardMetaData/CardData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CombatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyAi/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyAi/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyAi/EnemyMovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyAi/EnemyMovementController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScreen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Deck/Deck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Deck/Deck.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Equipment/EquipmentCombos.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Equipment/EquipmentCombos.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Equipment/EquipmentData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Equipment/EquipmentData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Equipment/EquipmentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Equipment/EquipmentManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Equipment/EquipmentSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Equipment/EquipmentSlot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthbarUi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthBarUi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MouseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MouseController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerEquipment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerEquipment.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSaveObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSaveObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerHand/Hand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerHand/Hand.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerHand/PlayableCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerHand/PlayableCard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UiUtilities/TooltipPopup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UiUtilities/TooltipPopup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,6 +69,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyAi/Ayuna/AyunaAi.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyAi/ISpecialEnemyLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UiUtilities/BarUiScaler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Equipment/DraggableSlot.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="23AI44vbbESwG3A9liHJaq0vr4g" />
   <component name="ProjectLevelVcsManager">
@@ -162,7 +120,9 @@
       <updated>1641170274374</updated>
       <workItem from="1641170279311" duration="1331000" />
       <workItem from="1641171947526" duration="12000" />
-      <workItem from="1641172181409" duration="31657000" />
+      <workItem from="1641172181409" duration="36874000" />
+      <workItem from="1641544206535" duration="19680000" />
+      <workItem from="1641572861325" duration="180000" />
     </task>
     <task id="LOCAL−00001" summary=".">
       <created>1641171373812</created>
@@ -188,7 +148,13 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1641172237281</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary=".">
+      <created>1641214468616</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1641214468616</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -11,7 +11,7 @@ public class MouseController : MonoBehaviour
     private IAltHoverable _hoveredObj;
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && UiManager.Instance.CheckControls())
+        if (Input.GetMouseButtonDown(0))
         {
             CheckClicked();
         }

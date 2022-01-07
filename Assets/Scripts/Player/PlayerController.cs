@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using CardMetaData;
+using Equipment;
 using Player;
 using PlayerHand;
 using Tiles;
@@ -28,7 +29,6 @@ public class PlayerController : MonoBehaviour
      private int drawPerTurn = 0;
      private bool fastTurn = true;
      [NonSerialized] public int boostPool;
-     
 
      public delegate void PlayerActions();
      public event PlayerActions OnPlayerDone = () => {};
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
      private void SetPlayerStats()
      {
-          PlayerStatsObject playerStats = GameManager.Instance.playerSaveObject.GetPlayerStats();
+          PlayerSaveObj playerStats = GameManager.Instance.GetSave();
           playerHealth = playerStats.playerHealth;
           actionPoints = playerStats.actionPoints;
           playerArmor = playerStats.playerArmor;
@@ -59,8 +59,9 @@ public class PlayerController : MonoBehaviour
           boostPoolMax = playerStats.boostPoolMax;
           playerMoveValue = playerStats.playerMoveValue;
           startHandAmount = playerStats.startHandAmount;
+          drawPerTurn = playerStats.drawPerTurn;
           
-          playerEquipment.SetEquipment(GameManager.Instance.playerSaveObject.GetEquipment());
+          playerEquipment.SetEquipment(playerStats.equipmentList);
           playerEquipment.GetStats(out var eArmor, out var eDamage, out var eHealth, out var eMoveValue, out var eStartCards, out var eDrawPerTurn);
           playerDefense += eArmor;
           playerDamage += eDamage;
@@ -144,7 +145,7 @@ public class PlayerController : MonoBehaviour
           {
                playerArmor -= amount;
                amount = playerArmor < 0 ? math.abs(playerArmor) : 0;
-               
+               playerArmor = playerArmor < 0 ? 0 : playerArmor;
                CombatManager.Instance.SetPlayerArmorUi(playerArmor);
           }
          

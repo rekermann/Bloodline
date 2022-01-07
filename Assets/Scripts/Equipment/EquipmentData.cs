@@ -106,6 +106,7 @@ namespace Equipment
 
             
             builder.Append(NameColorRarity).AppendLine();
+            builder.AppendLine(eSlot.ToString());
             builder.Append("<color=green>");
             if (eArmor != 0)
             {
@@ -136,7 +137,7 @@ namespace Equipment
             builder.Append("</color>");
             if (eCards.Count > 0)
             {
-                builder.Append("<color=orange>").AppendLine();
+                builder.Append("<color=orange>");
                 int count=1;
                 BaseCardObject prevCard = null;
                 foreach (var card in eCards)
@@ -147,14 +148,14 @@ namespace Equipment
                     }
                     else if(prevCard != null)
                     {
-                        builder.Append(count.ToString("+0;-#") + " " + prevCard.cardName).AppendLine();
+                        builder.Append(count + " " + prevCard.cardName).AppendLine();
                         count = 1;
                     }
 
                     prevCard = card;
                 }
                 if(prevCard != null)
-                    builder.Append(count.ToString("+0;-#") + " " + prevCard.cardName).AppendLine();
+                    builder.Append(count + " " + prevCard.cardName).AppendLine();
             
                 builder.Append("</color>");
             }
@@ -171,9 +172,9 @@ namespace Equipment
                 case EquipmentRarity.Ordinary:
                     return Color.white;
                 case EquipmentRarity.Unusual:
-                    return Color.blue;
-                case EquipmentRarity.Rare:
                     return Color.cyan;
+                case EquipmentRarity.Rare:
+                    return Color.blue;
                 case EquipmentRarity.Epic:
                     return Color.yellow;
                 case EquipmentRarity.Unique:

@@ -289,6 +289,11 @@ namespace PlayerHand
                 {
                     CopyEffectResolver(value, touple[2]);
                 }
+
+                if (touple[0].ToLower() == "take")
+                {
+                    TakeEffectResolver(value, touple[2]);
+                }
             }
         
         }

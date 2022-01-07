@@ -11,6 +11,7 @@ namespace Equipment
 
         public List<BaseCardObject> CheckCardCombos(EquipmentData.WeaponComboTag tag1, EquipmentData.WeaponComboTag tag2)
         {
+            return null;
             if (tag1 == EquipmentData.WeaponComboTag.Unarmed && tag2 == EquipmentData.WeaponComboTag.Unarmed)
             {
                 return unarmedComboCards;

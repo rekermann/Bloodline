@@ -10,22 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ac0454d9b1d79449a696384f555545b, type: 3}
-  m_Name: Throw_stone
+  m_Name: Struggle
   m_EditorClassIdentifier: 
-  cardArt: {fileID: 21300000, guid: c005f4a19f95b6e4281825b9b2f8cb3f, type: 3}
-  cardName: Throw Stone
-  cardEffectText: Range 4 \nBoost X gain X range\nBoost 10 Copy card twice
-  cardBoostValue: 1
+  cardArt: {fileID: 21300000, guid: 86bc695219fc9504aba071cafbc604c0, type: 3}
+  cardName: Struggle
+  cardEffectText: Take 2 damage
+  cardBoostValue: 0
   attackType: 0
   origin: 0
   cardCost: 1
-  range: 4
-  aoeRange: 1
+  range: 1
+  aoeRange: 0
   beforeMainEffect: 
-  boostEffect:
-  - cost x;Gain x Range;
-  - cost 10;copy 2 this;
+  boostEffect: []
   onKillEffect: 
-  afterMainEffect: 
+  afterMainEffect: take 2 damage;
   defaultImage: {fileID: 21300000, guid: 67c3860dab8396148aa2caa58a252235, type: 3}
-  combatValue: 4
+  combatValue: 2
