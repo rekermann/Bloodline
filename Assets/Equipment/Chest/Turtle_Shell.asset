@@ -10,20 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81c855cef10255f439112f9916f061fe, type: 3}
-  m_Name: Power Potion
+  m_Name: Turtle_Shell
   m_EditorClassIdentifier: 
-  eSprite: {fileID: 21300000, guid: decae6c26e822ff4da9534545ee98dbf, type: 3}
-  eName: Power Potion
+  eSprite: {fileID: 21300000, guid: 57a995bb355af1b47bb13924f11298dd, type: 3}
+  eName: Turtle Shell
   eText: 
-  eRarity: 0
-  eSlot: 11
-  eArmor: 0
-  eDamage: 0
-  eMove: 0
-  eHealth: 0
+  eRarity: 2
+  eSlot: 1
+  eArmor: 3
+  eDamage: -1
+  eMove: -3
+  eHealth: 50
   startCardDraw: 0
   drawPerTurn: 0
   specialEffects: []
   eWeaponComboTag: 0
   eCards:
-  - {fileID: 11400000, guid: 500b4cfdedb1c8246bef0dd8ff287f1b, type: 2}
+  - {fileID: 11400000, guid: b0d9e617fc52673458ff35de5b5698e5, type: 2}
+  - {fileID: 11400000, guid: b0d9e617fc52673458ff35de5b5698e5, type: 2}

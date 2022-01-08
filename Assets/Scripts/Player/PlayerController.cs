@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour
      private int drawPerTurn = 0;
      private bool fastTurn = true;
      [NonSerialized] public int boostPool;
+     private List<BuffEffects> buffEffects = new List<BuffEffects>();
+     public bool invisible;
 
      public delegate void PlayerActions();
      public event PlayerActions OnPlayerDone = () => {};
@@ -66,7 +68,9 @@ public class PlayerController : MonoBehaviour
           playerDefense += eArmor;
           playerDamage += eDamage;
           playerHealth += eHealth;
+          playerHealth = playerHealth < 1 ? 1 : playerHealth;
           playerMoveValue += eMoveValue;
+          playerMoveValue = playerMoveValue < 1 ? 1 : playerMoveValue;
           startHandAmount += eStartCards;
           drawPerTurn += eDrawPerTurn;
           
@@ -76,6 +80,7 @@ public class PlayerController : MonoBehaviour
      
      public void StartOfTurn()
      {
+          invisible = false;
           DrawCard(drawPerTurn);
           playerArmor /= 2;
           boostPool = 0;
@@ -83,6 +88,63 @@ public class PlayerController : MonoBehaviour
           CombatManager.Instance.SetPlayerArmorUi(playerArmor);
           actionPoints = _maxActionPoints;
           CombatManager.Instance.PlayerActionUi.GetAction(_maxActionPoints);
+          UpdateBuffs();
+     }
+
+     public void UpdateBuffs()
+     {
+          List<BuffEffects> removeMe = new List<BuffEffects>();
+          foreach (var buff in buffEffects)
+          {
+               if(buff.timer == "turn")
+                    buff.count--;
+               if (buff.count <= 0)
+               {
+                    removeMe.Add(buff);
+               }
+          }
+
+          foreach (var remove in removeMe)
+          {
+               buffEffects.Remove(remove);
+          }
+     }
+
+     public void UseNextBuff()
+     {
+          
+     }
+
+     public List<string> GetBuffEffects(CardData.CardType cardType)
+     {
+          
+          List<string> returnList = new List<string>();
+          BuffEffects removeMe = null;
+          foreach (var buff in buffEffects)
+          {
+               foreach (var effectedCard in buff.effectedCardType.Split('/'))
+               {
+                    if (cardType.ToString() == effectedCard)
+                    {
+                         if (buff.timer == "next")
+                         {
+                              if (--buff.count <= 0)
+                              {
+                                   removeMe = buff;
+                              } 
+                         }
+                         returnList.Add(buff.buffEffect);
+                    }
+               }
+               
+          }
+
+          if (removeMe != null)
+          {
+               buffEffects.Remove(removeMe);
+          }
+
+          return returnList;
      }
 
      public bool CanPlayCard(int range, int cost)
@@ -130,10 +192,7 @@ public class PlayerController : MonoBehaviour
                     CardManager.Instance.discardPile.AddCardToDiscard(deck.DrawToDiscard());
                
                }
-               else
-               {
-                    hand.AddCard(deck.DrawCard());
-               }
+               else { hand.AddCard(deck.DrawCard()); }
           }
 
      }
@@ -268,5 +327,10 @@ public class PlayerController : MonoBehaviour
      {
           if (playerArmor > amount) return 0;
           return Math.Abs(playerArmor - amount);
+     }
+
+     public void GainBuffEffect(int count, string effect, string timer, string effectedCardType)
+     {
+          buffEffects.Add(new BuffEffects(count, effect, effectedCardType, timer));
      }
 }

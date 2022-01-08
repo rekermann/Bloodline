@@ -31,7 +31,7 @@ namespace Equipment
             Ordinary,
             Unusual,
             Rare,
-            Epic,
+            Epic,   
             Unique,
             Legendary
         

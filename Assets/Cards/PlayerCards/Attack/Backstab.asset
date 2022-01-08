@@ -9,22 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f3a4fd08fe645ab8d56451143389a7a, type: 3}
-  m_Name: Critical_Strike
+  m_Script: {fileID: 11500000, guid: 1ac0454d9b1d79449a696384f555545b, type: 3}
+  m_Name: Backstab
   m_EditorClassIdentifier: 
-  cardArt: {fileID: 21300000, guid: ded27536e0d09b34bb521396210a53e2, type: 3}
-  cardName: Critical Strike
-  cardEffectText: 
+  cardArt: {fileID: 21300000, guid: 730c14453817c534ea76b19418ad2883, type: 3}
+  cardName: Backstab
+  cardEffectText: <b>Free</b>
   cardBoostValue: 0
   attackType: 0
   origin: 0
-  cardCost: 1
-  range: 0
+  cardCost: 0
+  range: 1
   aoeRange: 0
-  beforeMainEffect: Next Attack/Versatile;
-  boostEffect:
-  - Gain 2 damageMulti;
+  beforeMainEffect: 
+  boostEffect: []
   onKillEffect: 
   afterMainEffect: 
-  defaultImage: {fileID: 0}
-  mainValue: 0
+  defaultImage: {fileID: 21300000, guid: 67c3860dab8396148aa2caa58a252235, type: 3}
+  combatValue: 4

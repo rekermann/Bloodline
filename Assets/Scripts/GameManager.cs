@@ -18,16 +18,19 @@ public class GameManager : MonoBehaviour
 
     public void Awake()
     {
-        
-        if (Instance != null)
+        if (GameManager.Instance == null)
+        {
+
+            Instance = this;
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            DontDestroyOnLoad(gameObject);
+            _playerSaveObj = playerSaveObject.GetPlayerStats();
+        }
+        else
         {
             Destroy(gameObject);
         }
-        
-        Instance = this;
-        SceneManager.sceneLoaded += OnSceneLoaded;
-        DontDestroyOnLoad(gameObject);
-        _playerSaveObj = playerSaveObject.GetPlayerStats();
+
 
     }
 
@@ -49,6 +52,7 @@ public class GameManager : MonoBehaviour
     
     public void SaveToObject()
     {
+        EquipmentManager.instance.SaveEquipment();
         playerSaveObject.SavePlayerStats(_playerSaveObj);
         EditorUtility.SetDirty(playerSaveObject);
         AssetDatabase.SaveAssets();
@@ -65,11 +69,18 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
+            EquipmentManager.instance.SaveEquipment();
             SceneManager.LoadScene("Ayuna");
         }
         if (Input.GetKeyDown(KeyCode.B))
         {
+            EquipmentManager.instance.SaveEquipment();
             SceneManager.LoadScene("CombatTestScene");
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            EquipmentManager.instance.SaveEquipment();
+            SceneManager.LoadScene("StartScreen");
         }
     }
 }

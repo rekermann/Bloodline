@@ -24,6 +24,6 @@ MonoBehaviour:
   beforeMainEffect: 
   boostEffect: []
   onKillEffect: 
-  afterMainEffect: Draw 3 Cards;
+  afterMainEffect: Draw 3 Card;
   defaultImage: {fileID: 21300000, guid: 33a38e0c9c6cc674ebd263cda4fba62b, type: 3}
   damage: -1

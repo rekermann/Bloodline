@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90c14be7725e874488c354d62e8cb4eb, type: 3}
-  m_Name: Power_up
+  m_Script: {fileID: 11500000, guid: 2f3a4fd08fe645ab8d56451143389a7a, type: 3}
+  m_Name: Power_Potion
   m_EditorClassIdentifier: 
-  cardArt: {fileID: 21300000, guid: 4d4596de5499877468f08d3940ee537b, type: 3}
-  cardName: Power Up
-  cardEffectText: <b>Free</b>\nGain 4 boost
-  cardBoostValue: 4
+  cardArt: {fileID: 21300000, guid: 5e1775d6ddfa2874fa4840cdc93fa4b4, type: 3}
+  cardName: Power Potion
+  cardEffectText: <b>Free</b>\n<b>Consumed</b>\nGain 2 damage for 2 turns
+  cardBoostValue: 0
   attackType: 3
   origin: 2
   cardCost: 0
@@ -24,6 +24,6 @@ MonoBehaviour:
   beforeMainEffect: 
   boostEffect: []
   onKillEffect: 
-  afterMainEffect: Gain 4 boost;
-  defaultImage: {fileID: 21300000, guid: 33a38e0c9c6cc674ebd263cda4fba62b, type: 3}
-  damage: -1
+  afterMainEffect: Buff 2 turn -Gain 2 damage-Attack/Versatile;
+  defaultImage: {fileID: 0}
+  mainValue: 0

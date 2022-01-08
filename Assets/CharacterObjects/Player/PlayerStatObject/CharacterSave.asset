@@ -21,15 +21,13 @@ MonoBehaviour:
   boostPoolMax: 10
   startHandAmount: 0
   drawPerTurn: 0
-  playerHeadSlot: {fileID: 11400000, guid: d206a3feaec8240489541259fd0cfc34, type: 2}
-  playerChestSlot: {fileID: 11400000, guid: 12f1db3480194954e9fdcd3632c94d95, type: 2}
-  playerLegsSlot: {fileID: 11400000, guid: 05fa7e3cc630cbf41b5cb921064602a9, type: 2}
-  playerNeckSlot: {fileID: 11400000, guid: 42176da76823bc64583a2aa3a0b180e3, type: 2}
+  playerHeadSlot: {fileID: 0}
+  playerChestSlot: {fileID: 0}
+  playerLegsSlot: {fileID: 0}
+  playerNeckSlot: {fileID: 0}
   playerFingerSlot: {fileID: 0}
-  playerMainHandSlot: {fileID: 11400000, guid: ecd41ac932e37be4a9bf0b5ba16b3f07, type: 2}
+  playerMainHandSlot: {fileID: 0}
   playerOffHandSlot: {fileID: 0}
-  playerPocketSlot: {fileID: 11400000, guid: dccaf88edb383ee4e8fe078f03619935, type: 2}
-  playerFeetSlot: {fileID: 11400000, guid: 138c88aea2bd7154eb9ebd14a3ea7434, type: 2}
-  backpackItemList:
-  - {fileID: 11400000, guid: 2099cae7df9edd34fa9595a6c4ab9411, type: 2}
-  - {fileID: 11400000, guid: d9ea274a8ddae844ba919fe60e02ac95, type: 2}
+  playerPocketSlot: {fileID: 0}
+  playerFeetSlot: {fileID: 0}
+  backpackItemList: []

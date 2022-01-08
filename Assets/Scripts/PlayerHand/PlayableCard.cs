@@ -116,7 +116,7 @@ namespace PlayerHand
 
             if (valueUsedAs.ToLower() == "damagemulti")
             {
-                tmpCombatValue = (tmpCombatValue  + _card.cardCombatValue) * (effectValue - 1);
+                tmpCombatValue += (tmpCombatValue  + _card.cardCombatValue) * (effectValue - 1);
             }
 
             if (valueUsedAs.ToLower() == "aoerange")
@@ -132,12 +132,28 @@ namespace PlayerHand
             {
                 _playerController.GainBoost(effectValue);
             }
+            if (valueUsedAs.ToLower() == "invisibility")
+            {
+                _playerController.invisible = true;
+            }
         
         }
+        private void BuffEffectResolver(int effectValue, string valueUsedAs, string effect)
+        {
+            string boostEffect = effect.Split('-')[1];
+            string effectedCards = effect.Split('-')[2];
+
+
+            if (valueUsedAs.ToLower() == "turn" || valueUsedAs.ToLower() == "next")
+            {
+                _playerController.GainBuffEffect(effectValue, boostEffect, valueUsedAs, effectedCards);
+            }
+        }
+        
     
         private void DrawEffectResolver(int effectValue, string valueUsedAs)
         {
-            if (valueUsedAs.ToLower() == "cards")
+            if (valueUsedAs.ToLower() == "card")
             {
                 _playerController.DrawCard(effectValue);
             }
@@ -148,6 +164,11 @@ namespace PlayerHand
             if (target.unitOnTile.GetComponent<Enemy>().TakeDamage(effectValue))
             {
                 OnKillEffect();
+            }
+            
+            if (valueUsedAs.ToLower() == "immobilize")
+            {
+                target.unitOnTile.GetComponent<Enemy>().immobilized = true;
             }
         }
 
@@ -186,12 +207,26 @@ namespace PlayerHand
         private void BeforeMainEffects()
         {
             CheckForTriggerCard();
+            CheckForPlayerBuffs();
             if (_baseCardObject.boostEffect.Length > 0)
             {
                 BoostCard();
             }
         
+            
             ContinuePhase();
+        }
+
+        private void CheckForPlayerBuffs()
+        {
+            
+            List<string> buffEffects = _playerController.GetBuffEffects(_card.cardType);
+            foreach (var buff in buffEffects)
+            {
+                
+                EffectResolver(buff);
+            }
+            
         }
 
         private void CheckForTriggerCard()
@@ -294,13 +329,23 @@ namespace PlayerHand
                 {
                     TakeEffectResolver(value, touple[2]);
                 }
+                if (touple[0].ToLower() == "buff")
+                {
+                    BuffEffectResolver(value, touple[2], effect);
+                }
+                if (touple[0].ToLower() == "deal")
+                {
+                    DealEffectResolver(value, touple[2]);
+                }
             }
         
         }
 
+
         private void ResolveMain()
         {
             tmpCombatValue += _baseCardObject.GetCardData().cardCombatValue;
+            
             tmpCombatValue *= copyCount;
         
             if (_card.cardType == CardData.CardType.Agility)

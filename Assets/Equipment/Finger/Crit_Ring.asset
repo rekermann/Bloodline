@@ -26,5 +26,5 @@ MonoBehaviour:
   specialEffects: []
   eWeaponComboTag: 0
   eCards:
-  - {fileID: 11400000, guid: 52cf5fae2c427ed45b07985b49def774, type: 2}
-  - {fileID: 11400000, guid: 52cf5fae2c427ed45b07985b49def774, type: 2}
+  - {fileID: 11400000, guid: 26d916c20892da74ea7f36c14f3cc3db, type: 2}
+  - {fileID: 11400000, guid: 26d916c20892da74ea7f36c14f3cc3db, type: 2}

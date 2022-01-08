@@ -9,21 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f3a4fd08fe645ab8d56451143389a7a, type: 3}
-  m_Name: Power_Up
+  m_Script: {fileID: 11500000, guid: f9722f14299d6d14b95e7bd851210371, type: 3}
+  m_Name: Turtle_Up
   m_EditorClassIdentifier: 
-  cardArt: {fileID: 21300000, guid: 4d4596de5499877468f08d3940ee537b, type: 3}
-  cardName: Power up
-  cardEffectText: <b>Free</b>\n<b>Consumed</b>\nGain 4 boost
+  cardArt: {fileID: 21300000, guid: 39eb11586fb54db44a6b4ea9586178b1, type: 3}
+  cardName: Turtle up
+  cardEffectText: <b>Expensive<b>
   cardBoostValue: 4
   attackType: 3
   origin: 2
-  cardCost: 0
+  cardCost: 2
   range: 0
   aoeRange: 0
   beforeMainEffect: 
   boostEffect: []
   onKillEffect: 
-  afterMainEffect: Gain 4 boost;
-  defaultImage: {fileID: 0}
-  mainValue: -1
+  afterMainEffect: 
+  defaultImage: {fileID: 21300000, guid: 7f35e3d6f6559c7458b040246e3481ab, type: 3}
+  combatValue: 25

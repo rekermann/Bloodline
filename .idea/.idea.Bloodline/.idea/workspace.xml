@@ -1,53 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20ffb4ee-1428-4db9-b07f-40ebacadc215" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/129.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/129.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Attack/Struggle.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Attack/Struggle.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/OutsideCombat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/OutsideCombat/OutsideCombatUi.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/OutsideCombat/OutsideCombatUi.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/DraggableSlot.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/DraggableSlot.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Equipment.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Equipment.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Equipment/DraggableSlot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Equipment/DraggableSlot.cs.meta" afterDir="false" />
+    <list default="true" id="20ffb4ee-1428-4db9-b07f-40ebacadc215" name="Changes" comment=".">
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/Backstab.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/Backstab.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/Battle_music.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/Battle_music.jpg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/PowerShot.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/PowerShot.jpg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/ShieldBlock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/ShieldBlock.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/Vanish_full.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/Vanish_full.jpg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/aarcane_bolt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/aarcane_bolt.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/arrowShot.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/arrowShot.jpg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/bonk.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/bonk.jpg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/power.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/power.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/strange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/strange.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/turtleup.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/Card Art/turtleup.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Attack/Arcane_Bolt.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Attack/Arcane_Bolt.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Attack/Arrow_Shot.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Attack/Arrow_Shot.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Attack/Backstab.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Attack/Backstab.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Attack/Bonk.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Attack/Bonk.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Attack/Power_Shot.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Attack/Power_Shot.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Defense/Shield_Block.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Defense/Shield_Block.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Defense/Turtle_Up.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Defense/Turtle_Up.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Resource/Health_Potion.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Resource/Health_Potion.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Resource/Power_Potion.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Resource/Power_Potion.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Resource/Strange_Potion.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Resource/Strange_Potion.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Tactic/Battle_Music.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Tactic/Battle_Music.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Tactic/Critical_Strike.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Tactic/Critical_Strike.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Tactic/Vanish.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Tactic/Vanish.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Chest/Shroud.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Chest/Shroud.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Chest/Turtle_Shell.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Chest/Turtle_Shell.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/Assassin_Dagger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/Assassin_Dagger.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/Battle_Shield.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/Battle_Shield.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/Bone_Club.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/Bone_Club.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/Elvish_Bow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/Elvish_Bow.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/Exotic_Legs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/Exotic_Legs.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/Shroud.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/Shroud.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/StrangePotion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/StrangePotion.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/Turtle_Shell.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/Turtle_Shell.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/battle_horn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/battle_horn.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/goldring.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/goldring.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/pocket_meat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/pocket_meat.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/spellbook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Equipment Art/spellbook.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Finger/Gold_Ring.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Finger/Gold_Ring.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/MainHand/Assasin_Dagger.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/MainHand/Assasin_Dagger.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/MainHand/Bone_club.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/MainHand/Bone_club.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/MainHand/Spellbook.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/MainHand/Spellbook.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/OffHand/Battle_Shield.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/OffHand/Battle_Shield.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Pocket/Battle_Horn.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Pocket/Battle_Horn.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Pocket/Pocket_Meat.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Pocket/Pocket_Meat.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Potions/Health_Potion.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Potions/Health_Potion.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Potions/Power_Potion.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Potions/Power_Potion.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Potions/Strange_Potion.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/Potions/Strange_Potion.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/TwoHand/Bow.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Equipment/TwoHand/Bow.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/BuffEffects.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/BuffEffects.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bloodline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bloodline/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Attack/Throw_stone.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Attack/Throw_stone.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Resource/Power_Up.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Resource/Power_Up.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Resource/Small_Health_Potion.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Resource/Small_Health_Potion.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Tactic/Plan_ahead.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Tactic/Plan_ahead.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Tactic/Power_up.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Tactic/Power_up.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Trigger/Critical_Strike.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cards/PlayerCards/Trigger/Critical_Strike.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CharacterObjects/Player/PlayerStatObject/CharacterSave.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CharacterObjects/Player/PlayerStatObject/CharacterSave.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Equipment/Chest/Jacket.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Equipment/Chest/Jacket.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Equipment/EitherHand/Plated_glove.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Equipment/EitherHand/Plated_glove.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Equipment/Feet/Boots.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Equipment/Feet/Boots.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Equipment/Finger/Crit_Ring.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Equipment/Finger/Crit_Ring.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Equipment/Head/Hungry_Helmet.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Equipment/Head/Hungry_Helmet.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Equipment/Head/Thinking_cap.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Equipment/Head/Thinking_cap.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Equipment/Legs/Leather_Pants.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Equipment/Legs/Leather_Pants.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Equipment/Pocket/Pocket_Stones.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Equipment/Pocket/Pocket_Stones.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Equipment/TwoHand/Berserk_Sword.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Equipment/TwoHand/Berserk_Sword.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/CombatPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/CombatPrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/EmptyPlayerCharacter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/EmptyPlayerCharacter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/Equipment_Slot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/Equipment_Slot.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/TooltipCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/TooltipCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/UI_Combat_Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CombatPrefabs/UI_Combat_Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ayuna.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ayuna.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CombatTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CombatTestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Equipment/Potions/Power Potion.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Equipment/Potions/Power Potion.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Equipment/Potions/Small health Potion.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Equipment/Potions/Small health Potion.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScreen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Deck/Deck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Deck/Deck.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyAi/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyAi/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Equipment/EquipmentCombos.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Equipment/EquipmentCombos.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Equipment/EquipmentData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Equipment/EquipmentData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Equipment/EquipmentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Equipment/EquipmentManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Equipment/EquipmentSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Equipment/EquipmentSlot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MouseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MouseController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerEquipment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerEquipment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSaveObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSaveObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerHand/PlayableCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerHand/PlayableCard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UiUtilities/TooltipPopup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UiUtilities/TooltipPopup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +201,7 @@
       <workItem from="1641172181409" duration="36874000" />
       <workItem from="1641544206535" duration="19680000" />
       <workItem from="1641572861325" duration="180000" />
+      <workItem from="1641573426162" duration="19006000" />
     </task>
     <task id="LOCAL−00001" summary=".">
       <created>1641171373812</created>
@@ -154,7 +233,13 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1641214468616</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary=".">
+      <created>1641573475492</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1641573475492</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

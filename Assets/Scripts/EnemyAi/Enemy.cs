@@ -30,6 +30,7 @@ namespace EnemyAi
         public EnemyStatsObject enemyStatsObject;
 
         private BaseCardObject _activeCard;
+        public bool immobilized;
         
         
 
@@ -58,9 +59,10 @@ namespace EnemyAi
         public void TakeTurn()
         {
             specialRules?.StartOfTurn();
-            EnemyMovement();
+            
             PlayerController player = EnemyMovementController.CheckIfPlayerIsInRange(tileStandingOn, baseRange);
-            if (player != null)
+            if(!CombatManager.Instance.GetPlayer().invisible && !immobilized) EnemyMovement();
+            if (player != null && !player.invisible)
             {
                 specialRules?.BeforeDamage();
                 EnemyAttack(player);
@@ -75,12 +77,14 @@ namespace EnemyAi
             specialRules?.EndOfTurn();
             damagedTakenThisTurn = 0;
             damagedDealtThisTurn = 0;
+            immobilized = false;
         }
 
 
         private void EnemyMovement()
         {
             MapTile destinationTile = EnemyMovementController.MoveTowardsPlayer(tileStandingOn, baseMoveValue + tmpMoveValue);
+           
             if (destinationTile != tileStandingOn) tileStandingOn.unitOnTile = null;
             if (destinationTile != null)
             {

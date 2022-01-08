@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ayuna.unity
     guid: 9c647c156e8d25f48933508f170f20d5
+  - enabled: 1
+    path: Assets/Scenes/StartScreen.unity
+    guid: a41f5425b9b856342a407b0b362eac21
   m_configObjects: {}
