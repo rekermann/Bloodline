@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20ffb4ee-1428-4db9-b07f-40ebacadc215" name="Changes" comment=".">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bloodline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bloodline/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovementController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InformationWindowUi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InformationWindowUi.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +24,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyAi/Ayuna/AyunaAi.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyAi/ISpecialEnemyLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UiUtilities/BarUiScaler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Rickard/Bloodline/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Equipment/DraggableSlot.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="23AI44vbbESwG3A9liHJaq0vr4g" />
@@ -80,7 +79,7 @@
       <workItem from="1641172181409" duration="36874000" />
       <workItem from="1641544206535" duration="19680000" />
       <workItem from="1641572861325" duration="180000" />
-      <workItem from="1641573426162" duration="19464000" />
+      <workItem from="1641573426162" duration="19519000" />
     </task>
     <task id="LOCAL−00001" summary=".">
       <created>1641171373812</created>
@@ -124,7 +123,13 @@
       <option name="presentableId" value="LOCAL−00007" />
       <updated>1641667868765</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL−00008" summary=".">
+      <created>1641667965672</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1641667965672</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
